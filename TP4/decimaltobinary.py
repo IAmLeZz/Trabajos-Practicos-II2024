@@ -6,8 +6,8 @@ def decimaltobinary(n):
     if n > 0:
         binary = ''
         while n > 0:
-            binary = n % 2, binary
+            binary = str(n % 2) + binary
             n = n // 2
         return binary
 
-print(decimaltobinary(12))
+print(decimaltobinary(15))
