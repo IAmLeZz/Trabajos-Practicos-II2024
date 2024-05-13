@@ -1,13 +1,11 @@
 def decimaltobinary(n):
-    if n < 0:
-        return 'Los números negativos no están permitidos'
-    if n == 0:
-        return '0'
+    temp = 0
+    binary = 0
     if n > 0:
-        binary = ''
-        while n > 0:
-            binary = str(n % 2) + binary
-            n = n // 2
-        return binary
-
-print(decimaltobinary(15))
+       while n > 0:
+           binary = binary + (n % 2) * (10 ** temp)
+           n = n // 2
+           temp += 1
+    return binary
+     
+print(decimaltobinary(50))

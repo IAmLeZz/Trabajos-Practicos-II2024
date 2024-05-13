@@ -1,7 +1,7 @@
 resultado = 1
-a = 4
+a = 5
 
-while a >= 1:
+while a > 1:
     resultado = resultado * a
     a = a - 1
     

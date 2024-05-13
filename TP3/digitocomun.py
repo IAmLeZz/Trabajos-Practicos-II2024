@@ -7,10 +7,11 @@ else:
     num2 = int(input("Escriba un número de cualquier cantidad de dígitos."))
 
     found = False
-    for i in str(num2):
-        if i == str(num1):
+
+    while found == False:
+        digit = num2 % 10
+        if digit == num1:
             found = True
-            break
 
     if found:
         print("Verdadero")
