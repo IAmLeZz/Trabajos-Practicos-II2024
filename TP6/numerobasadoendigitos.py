@@ -1,3 +1,4 @@
+# Contador de dígitos que devuelve el conteo
 def counter(num):
     count = 0
     while num > 0:
@@ -11,7 +12,8 @@ def even_or_odd(num):
         return "El numero es par"
     else:
         return "El numero es impar"
-    
+
+# Convertir un numero decimal a binario
 def decimal_to_binary(num):
     base = 0
     binary = 0

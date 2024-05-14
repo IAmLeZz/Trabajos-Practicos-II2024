@@ -6,6 +6,8 @@ def convert_time(segundos):
     return horas, minutos, segundos_resto
 
 # Añadir el primer tiempo dado con el segundo
+# Verificar si los segundos totales son mayores a 60 y sumarlos a los minutos
+# Verificar si los minutos totales son mayores a 60 y sumarlos a las horas
 def add_time1and2(horas2, minutos2, segundos2, segundos):
     horas1, minutos1, segundos1 = convert_time(segundos)
     segundos_total = segundos2 + segundos1

@@ -1,3 +1,8 @@
+# Para verificar si un número es capicúa, se inicia una variable rev en 0 y se guarda el número en una variable temporal. 
+# Luego, se itera mientras la variable temporal sea distinta de 0. 
+# En cada iteración, se multiplica rev por 10 y se le suma el módulo de la variable temporal entre 10 (último dígito). 
+# Luego, se divide la variable temporal entre 10. 
+# Finalmente, se retorna si el número es igual a rev.
 def palindrome(n):
     rev = 0
     temp = n
@@ -17,7 +22,7 @@ def main():
             count += 1
         if palindrome(num):
             capicuas += 1
-            print(f"El número {num} es capicúa.")
+            print('El número',num ,'es capicúa.')
 
     if count > 0:
         promedio = suma / count

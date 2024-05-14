@@ -1,4 +1,4 @@
-def get_numbers(n):
+def create_2_digits_numbers(n):
     c1 = n // 100
     c2 = (n // 10) % 10
     c3 = n % 10
@@ -13,6 +13,6 @@ def main():
         elif n < 100 or n > 999:
             print('Por favor, introduce un número de 3 cifras.')
         else:
-            get_numbers(n)
+            create_2_digits_numbers(n)
 
 main()
