@@ -1,4 +1,4 @@
-def decimaltobinary(n):
+def decimal_to_binary(n):
     temp = 0
     binary = 0
     if n > 0:
@@ -8,4 +8,4 @@ def decimaltobinary(n):
            temp += 1
     return binary
      
-print(decimaltobinary(50))
+print(decimal_to_binary(50))

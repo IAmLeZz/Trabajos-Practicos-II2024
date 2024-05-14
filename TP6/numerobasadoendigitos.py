@@ -5,13 +5,14 @@ def counter(num):
         num = num // 10
     return count
 
-def evenorodd(num):
+# Verificar si el numero es par o impar
+def even_or_odd(num):
     if num % 2 == 0:
-        return "el numero es par"
+        return "El numero es par"
     else:
-        return "el numero es impar"
+        return "El numero es impar"
     
-def decimaltobinary(num):
+def decimal_to_binary(num):
     base = 0
     binary = 0
     while num > 0:
@@ -20,17 +21,18 @@ def decimaltobinary(num):
         base += 1
     return binary
 
-num1 = int(input('ingrese un numero: '))
-num2 = int(input('ingrese otro numero: '))
-num3 = int(input('ingrese ultimo numero: '))
+def main():
+    num1 = int(input('Ingrese un numero: '))
+    num2 = int(input('Ingrese otro numero: '))
+    num3 = int(input('Ingrese ultimo numero: '))
 
-numCompuesto = counter(num1)*100+counter(num2)*10+counter(num3)
+    num_compuesto = counter(num1)*100+counter(num2)*10+counter(num3)
 
-print('El numero compuesto es:', numCompuesto)
+    print('El numero compuesto es:', num_compuesto)
+    print(even_or_odd(num_compuesto))
+    print('El binario del numero es: ', decimal_to_binary(num_compuesto))
 
-
-print(evenorodd(numCompuesto))
-print('El binario del numero es: ', decimaltobinary(numCompuesto))
+main()
 
 
         
