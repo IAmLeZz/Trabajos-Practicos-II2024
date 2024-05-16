@@ -24,11 +24,10 @@ def decimal_to_binary(num):
     return binary
 
 def main():
-    num1 = int(input('Ingrese un numero: '))
-    num2 = int(input('Ingrese otro numero: '))
-    num3 = int(input('Ingrese ultimo numero: '))
-
-    num_compuesto = counter(num1)*100+counter(num2)*10+counter(num3)
+    num_compuesto = 0
+    for i in range(3):
+        num = counter(int(input('Ingrese un numero: ')))
+        num_compuesto = num_compuesto*10 + num
 
     print('El numero compuesto es:', num_compuesto)
     print(even_or_odd(num_compuesto))

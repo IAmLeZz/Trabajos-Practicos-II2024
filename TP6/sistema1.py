@@ -35,12 +35,16 @@ def increasing_order(num1, num2, num3):
 
 # Convertir metros a otro sistema
 def conversion_from_meters_to_another_system(meters, system):
+    inch = 0.0254
+    feet = inch * 12
+    yard = feet * 3
+    
     if system == 1:
-        return meters * 1.094
+        return 'yardas: ', meters / yard
     if system == 2:
-        return meters * 39.3701
+        return 'pulgadas: ', meters / inch
     if system == 3:
-        return meters * 100
+        return 'centimetros: ', meters / 0.01
 
 def excede_a_x(num):
     n = 0
