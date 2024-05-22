@@ -1,37 +1,38 @@
-# Ordenar los números dados de manera ascendiente
+# Ordenar los números dados de manera creciente
 def increasing_order(num1, num2, num3):
-    first_number = 0
-    second_number = 0
-    third_number = 0
-    
-    if num1 > num2:
-        if num1 > num3:
-            first_number = num1
-            if num2 > num3:
-                second_number = num2
-                third_number = num3
-            else:
-                second_number = num3
-                third_number = num2
+    # Inicializar las variables
+    max_num = mid_num = min_num = None
+
+    # Encontrar el número máximo
+    if num1 >= num2 and num1 >= num3:
+        max_num = num1
+        # Determinar el número medio y el número mínimo
+        if num2 >= num3:
+            mid_num = num2
+            min_num = num3
         else:
-            first_number = num3
-            second_number = num1
-            third_number = num2
+            mid_num = num3
+            min_num = num2
+    elif num2 >= num1 and num2 >= num3:
+        max_num = num2
+        # Determinar el número medio y el número mínimo
+        if num1 >= num3:
+            mid_num = num1
+            min_num = num3
+        else:
+            mid_num = num3
+            min_num = num1
     else:
-        if num2 > num3:
-            first_number = num2
-            if num1 > num3:
-                second_number = num1
-                third_number = num3
-            else:
-                second_number = num3
-                third_number = num1
+        max_num = num3
+        # Determinar el número medio y el número mínimo
+        if num1 >= num2:
+            mid_num = num1
+            min_num = num2
         else:
-            first_number = num3
-            second_number = num2
-            third_number = num1
-    
-    return first_number, second_number, third_number
+            mid_num = num2
+            min_num = num1
+
+    return max_num, mid_num, min_num
 
 # Convertir metros a otro sistema
 def conversion_from_meters_to_another_system(meters, system):
