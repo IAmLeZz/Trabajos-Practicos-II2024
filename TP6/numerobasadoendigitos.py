@@ -24,14 +24,17 @@ def decimal_to_binary(num):
     return binary
 
 def main():
-    num_compuesto = 0
-    for i in range(3):
-        num = counter(int(input('Ingrese un numero: ')))
-        num_compuesto = num_compuesto*10 + num
+    salir = False
+    while salir == False:
+        num_compuesto = 0
+        for i in range(3):
+            num = counter(int(input('Ingrese un numero: ')))
+            num_compuesto = num_compuesto*10 + num
 
-    print('El numero compuesto es:', num_compuesto)
-    print(even_or_odd(num_compuesto))
-    print('El binario del numero es: ', decimal_to_binary(num_compuesto))
+        print('El numero compuesto es:', num_compuesto)
+        print(even_or_odd(num_compuesto))
+        print('El binario del numero es: ', decimal_to_binary(num_compuesto))
+        salir = input('Desea salir? (s/n): ') == 's'
 
 main()
 

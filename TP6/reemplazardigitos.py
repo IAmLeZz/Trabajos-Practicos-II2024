@@ -20,8 +20,12 @@ def reemplazar_version_int(n, d, x):
     return result
 
 def main():
-    n = int(input('Ingrese un numero de al menos 2 digitos: '))
-    d = int(input('Ingrese el valor de d (un digito): '))
-    x = int(input('Ingrese el valor de x (un digito): '))
-    print(reemplazar_version_int(n, d, x))
+    salir = False
+    while salir == False:
+        n = int(input('Ingrese un numero de al menos 2 digitos: '))
+        d = int(input('Ingrese el valor de d (un digito): '))
+        x = int(input('Ingrese el valor de x (un digito): '))
+        print(reemplazar_version_int(n, d, x))
+        salir = input('Desea salir? (s/n): ') == 's'
+main()
 

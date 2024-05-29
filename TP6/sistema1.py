@@ -46,7 +46,10 @@ def conversion_from_meters_to_another_system(meters, system):
         return 'pulgadas: ', meters / inch
     if system == 3:
         return 'centimetros: ', meters / 0.01
-
+    
+# Inicializar n (número actual que será sumado) y suma
+# Mientras la suma sea menor o igual al número ingresado se sumará n a la suma y se incrementará n en 1
+# Devolver n
 def excede_a_x(num):
     n = 0
     suma = 0

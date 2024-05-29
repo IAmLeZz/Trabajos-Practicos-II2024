@@ -5,9 +5,9 @@ def convert_time(segundos):
     segundos_resto = (segundos % 3600) % 60
     return horas, minutos, segundos_resto
 
-# Añadir el primer tiempo dado con el segundo
-# Verificar si los segundos totales son mayores a 60 y sumarlos a los minutos
-# Verificar si los minutos totales son mayores a 60 y sumarlos a las horas
+# Añadir el primer tiempo ingresado con el segundo
+# Verificar si los segundos totales son mayores a 60 y sumarlos a los minutos si es así
+# Verificar si los minutos totales son mayores a 60 y sumarlos a las horas si es así
 def add_time1and2(horas2, minutos2, segundos2, segundos):
     horas1, minutos1, segundos1 = convert_time(segundos)
     segundos_total = segundos2 + segundos1
@@ -30,7 +30,6 @@ def main():
     print('1. Ingresar Valor')
     print('2. Horas / Minutos / Segundos')
     print('3. Sumar tiempo')
-
     while opcion:
         opcion = input('Ingrese una opción: ')
         if opcion == '1':

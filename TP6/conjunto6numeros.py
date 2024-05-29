@@ -12,25 +12,28 @@ def palindrome(n):
     return n == rev
 
 def main():
-    suma = 0
-    count = 0
-    capicuas = 0
-    for i in range(6):
-        num = int(input('Ingrese el número: '))
-        if num % 7 == 0:
-            suma += num
-            count += 1
-        if palindrome(num):
-            capicuas += 1
-            print('El número',num ,'es capicúa.')
+    salir = False
+    while salir == False:
+        suma = 0
+        count = 0
+        capicuas = 0
+        for i in range(6):
+            num = int(input('Ingrese el número: '))
+            if num % 7 == 0:
+                suma += num
+                count += 1
+            if palindrome(num):
+                capicuas += 1
+                print('El número',num ,'es capicúa.')
 
-    if count > 0:
-        promedio = suma / count
-        print("El promedio de los números múltiplos de 7 es: ", promedio)
-    else:
-        print("No se ingresaron números múltiplos de 7.")
+        if count > 0:
+            promedio = suma / count
+            print("El promedio de los números múltiplos de 7 es: ", promedio)
+        else:
+            print("No se ingresaron números múltiplos de 7.")
 
-    print('Se ingresaron ',capicuas, 'números capicúas.')
+        print('Se ingresaron ',capicuas, 'números capicúas.')
+        salir = input('Desea salir? (s/n): ') == 's'
     
 main()
 
